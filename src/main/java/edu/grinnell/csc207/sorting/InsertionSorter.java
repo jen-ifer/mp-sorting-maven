@@ -40,6 +40,26 @@ public class InsertionSorter<T> implements Sorter<T> {
   // | Methods |
   // +---------+
 
+
+
+
+
+  /**
+   * Decomposition- We are sorting one element to its correct spot
+   * @param values the generic array our element needs to be sorted in 
+   * @param index the index of the element we are sorting
+   */
+  public void insert(T[] values, int index) {
+    T valNeedSorted = values[index];
+    int comparing;
+    int indexShift = index;
+
+    while((indexShift > 0) && (order.compare(valNeedSorted, values[indexShift-1]) < 0))  {
+      values[indexShift] = values [indexShift - 1];
+      indexShift--;
+    }
+    values[indexShift] = valNeedSorted;
+  }
   /**
    * Sort an array in place using insertion sort.
    *
@@ -55,6 +75,8 @@ public class InsertionSorter<T> implements Sorter<T> {
    */
   @Override
   public void sort(T[] values) {
-    // STUB
+    for(int i = 1; i < values.length ; i++){
+      insert(values, i);
+    }
   } // sort(T[])
 } // class InsertionSorter

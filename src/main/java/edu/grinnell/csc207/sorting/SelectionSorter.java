@@ -40,6 +40,25 @@ public class SelectionSorter<T> implements Sorter<T> {
   // | Methods |
   // +---------+
 
+// [7, 10, 5]
+// order.compare(valNeedSorted, values[indexShift-1]) < 0
+
+  public int indexofsmallest(T[] values, int index) {
+    T smallest = values[index];
+    for(int i = index + 1; i < values.length; i++) {
+      if((order.compare(values[i], smallest)) < 0) {
+        smallest = values[i];
+      }
+    }
+    return smallest;
+    
+  }
+
+
+
+
+
+
   /**
    * Sort an array in place using selection sort.
    *
