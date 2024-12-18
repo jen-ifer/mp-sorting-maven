@@ -39,11 +39,7 @@ public class InsertionSorter<T> implements Sorter<T> {
   // +---------+-----------------------------------------------------
   // | Methods |
   // +---------+
-
-
-
-
-
+  
   /**
    * Decomposition- We are sorting one element to its correct spot
    * @param values the generic array our element needs to be sorted in 
@@ -60,6 +56,7 @@ public class InsertionSorter<T> implements Sorter<T> {
     }
     values[indexShift] = valNeedSorted;
   }
+  
   /**
    * Sort an array in place using insertion sort.
    *

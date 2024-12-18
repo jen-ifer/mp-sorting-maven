@@ -40,6 +40,33 @@ public class MergeSorter<T> implements Sorter<T> {
   // | Methods |
   // +---------+
 
+
+public void splitHelper (T[] values, int lb, int ub) {
+  // midpoint = lb + (ub - lb) / 2;
+  // if(values.length !=0){
+  //   T[] left =
+  //   T[] right =
+
+  //   for(int i = 0; i <= midpoint; i++) {
+
+  //   }
+
+  //   for(int k = midpoint + 1; k < ub; k++){
+
+  //   }
+  // }
+
+
+}
+
+
+
+
+
+
+
+
+
   /**
    * Sort an array in place using merge sort.
    *
